@@ -1,5 +1,7 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
+import loupe from './img/loupe.png';
+import mic from './img/mic.png';
 // 기본 게시판 셋팅
 // 기본 디자인, 기본 컨텐츠 생성
 function Content(props){
@@ -127,6 +129,7 @@ function Main(){
   },[]);
   
       //커서 깜빡임 효과
+      // useState를 사용하여 토글 효과를 만들었고, 반복되는 함수를 useEffect 훅을 통해 한 번만 실행되게 하였다.
   const [cursor, setCursor] = useState(true);
   const toggle = ()=>{
     setCursor(cursor =>!cursor);
@@ -136,8 +139,10 @@ function Main(){
     return () => clearInterval(interval);
 }, []);
 // 내용 값
- return <div>
-   <h2 id="dynamic" className={cursor? '':'active'} onChange={()=>{toggle();}}></h2>
+ return <div className="mainBox">
+   <h2 className="loupe"><img src={loupe} alt="돋보기 이미지" /></h2>
+   <div id="dynamic" className={cursor? '':'active'} onChange={()=>{toggle();}}></div>
+   <p className="mic"><img src={mic} alt="음성 마이크 이미지" /></p>
  </div> 
 }
 function App() {
@@ -153,7 +158,7 @@ function App() {
   let content = null;
   let control = null;
   if(mode=='welcome'){
-    content = <div className="mainBox"><Main></Main></div>
+    content = <div><Main></Main></div>
   }
   else if(mode=='read'){
     let title, body, date = null;
