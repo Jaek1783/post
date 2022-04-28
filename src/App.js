@@ -61,7 +61,7 @@ function Create(props){
 // 로고 헤더 생성
 function Header(props){
   return <header>
-    <h1><a href="/" onClick={(event)=>{
+    <h1><a href="./index.html" onClick={(event)=>{
       event.preventDefault();
       props.onChangeMode();
     }}>{props.title}</a></h1>
