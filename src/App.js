@@ -1,6 +1,5 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
 // 기본 게시판 셋팅
 // 기본 디자인, 기본 컨텐츠 생성
 function Content(props){
