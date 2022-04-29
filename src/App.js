@@ -1,7 +1,5 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
-import loupe from './img/loupe.png';
-import mic from './img/mic.png';
 // 기본 게시판 셋팅
 // 기본 디자인, 기본 컨텐츠 생성
 function Content(props){
@@ -140,9 +138,7 @@ function Main(){
 }, []);
 // 내용 값
  return <div className="mainBox">
-   <h2 className="loupe"><img src={loupe} alt="돋보기 이미지" /></h2>
    <div id="dynamic" className={cursor? '':'active'} onChange={()=>{toggle();}}></div>
-   <p className="mic"><img src={mic} alt="음성 마이크 이미지" /></p>
  </div> 
 }
 function App() {

@@ -28,19 +28,6 @@ h1>a{
   display: inline-block;
 }
 /* mainPage */
-.loupe{
-  width:2rem;
-  position:absolute;
-  top:33%;
-  left:3%;
-}
-.mic{
-  width:2rem;
-  position:absolute;
-  top:33%;
-  right:3%;
-}
-
 @media screen and (min-width:871px) {
   .mainBox{
     width:100%;
@@ -139,7 +126,7 @@ h1>a{
     position:relative;
     font-size:2rem;
     height:1.6rem;
-    padding-left:4rem;
+    padding-left:2rem;
     box-sizing: border-box;
     /* padding-top:1.5rem; */
   }  
